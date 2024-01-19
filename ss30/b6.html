@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tam(arr){
+            arr.sort()
+            let a=0;
+            for(let i=0; i<arr.length; i++){
+                for(let j=i+1; j<arr.length; j++){
+                    let sum = arr[i] + arr[j];
+                    for(let z=j+1; z<arr.length; z++){
+                        if(sum > arr[z]){
+                            a++
+                        }
+                    }
+                }
+            }
+            console.log(a);
+        }
+        let arr = [4, 6, 3, 7];
+        tam(arr)
+    </script>
+</body>
+</html>
